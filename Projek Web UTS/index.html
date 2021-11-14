@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <title>arcspace</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="Image/Logo arcspace3.png"/>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <img src="Image/logo arcspace.png" id="logo" />
+        <div id="menu">
+          <a href="#banner" class="menu-item">Home</a>
+          <a href="#app" class="menu-item">Product</a>
+          <a href="#recomendation" class="menu-item">Recomendation</a>
+          <a href="#about" class="menu-item">About</a>
+          <a href="#social" class="menu-item">Contact</a>
+        </div>
+      </div>
+      <div id="title-banner">
+        <h1 id="title-text">Discover Your Favorite Story</h1>
+        <p id="tagline">Keep Exploring Your Imagination</p>
+      </div>
+      <a href="#app">
+        <div class="scroll-down"></div>
+      </a>
+    </div>
+
+    <!--Slide 2-->
+    <div id="about">
+      <h1 id="about-fill">About Us</h1>
+      <p id="about-desc">
+        <span style="color: aqua">arcspace</span> is the place where you can explore your <span style="color: aqua">imagination</span> and pick your own <span style="color: aqua">story</span> <br />so that you can make your own world and
+        break your imagination limit
+      </p>
+    </div>
+
+    <!--Slide 3-->
+    <div id="app">
+      <div class="app-display"> 
+        <a href="#banner" class="app-text">Enjoy Our Book</a> <div class="cart">Cart({{ cart }})</div>
+      </div>
+
+      <!--Tab Product Slide 3-->
+      <div id="item-list-container">
+        <div class="item-list">
+            <img class="item-image" src="./Image/book-01.png">
+                <div class="item-title">
+                    <h4><b>My Hero</b></h4>
+                </div>
+                <div class="item-price">
+                    <h5>$25.65</h5>
+                </div>
+                <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button> <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>               
+        </div>
+       
+        <div class="item-list">
+          <img class="item-image" src="./Image/book-02.png">
+              <div class="item-title">
+                  <h4><b>Horimiya</b></h4>
+              </div>
+              <div class="item-price">
+                  <h5>$50.19</h5>
+              </div>
+              <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button>  <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>              
+      </div>
+
+      <div class="item-list">
+        <img class="item-image" src="./Image/book-03.png">
+            <div class="item-title">
+                <h4><b>Childhood Friendship</b></h4>
+            </div>
+            <div class="item-price">
+                <h5>$45.00</h5>
+            </div>
+            <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button>  <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>              
+    </div>
+
+    <div class="item-list">
+      <img class="item-image" src="./Image/book-04.png">
+          <div class="item-title">
+              <h4><b>Lovers</b></h4>
+          </div>
+          <div class="item-price">
+              <h5>$90.02</h5>
+          </div>
+          <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button>  <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>              
+  </div>
+
+  <div class="item-list">
+    <img class="item-image" src="./Image/book-05.png">
+        <div class="item-title">
+            <h4><b>My Cute Bro</b></h4>
+        </div>
+        <div class="item-price">
+            <h5>$65.15</h5>
+        </div>
+        <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button> <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>               
+</div>
+
+<div class="item-list">
+  <img class="item-image" src="./Image/book-06.png">
+      <div class="item-title">
+          <h4><b>Chainsawman</b></h4>
+      </div>
+      <div class="item-price">
+          <h5>$25.12</h5>
+      </div>
+      <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button>  <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>              
+</div>
+
+<div class="item-list">
+  <img class="item-image" src="./Image/book-07.png">
+      <div class="item-title">
+          <h4><b>The Princess</b></h4>
+      </div>
+      <div class="item-price">
+          <h5>$55.10</h5>
+      </div>
+      <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button>  <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>              
+</div>
+
+<div class="item-list">
+  <img class="item-image" src="./Image/book-08.png">
+      <div class="item-title">
+          <h4><b>Snow White</b></h4>
+      </div>
+      <div class="item-price">
+          <h5>$95.22</h5>
+      </div>
+      <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button> <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>               
+</div>
+
+<div class="item-list">
+  <img class="item-image" src="./Image/book-09.png">
+      <div class="item-title">
+          <h4><b>Tempest Life</b></h4>
+      </div>
+      <div class="item-price">
+          <h5>$75.77</h5>
+      </div>
+      <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button> <button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>              
+</div>
+
+<div class="item-list">
+  <img class="item-image" src="./Image/book-10.png">
+      <div class="item-title">
+          <h4><b>Family Flowers</b></h4>
+      </div>
+      <div class="item-price">
+          <h5>$10.00</h5>
+      </div>
+      <button class="item-detail" v-on:click="addToCart"><b>{{ buy }}</b></a></button><button class="item-detail-cancel" v-on:click="removeFromCart"><b>{{ remove }}</b></a></button>                
+</div>
+</div> <!--Tutup Tab Product-->
+    
+
+  <!--Slide 4-->
+  <div id="recomendation">
+    <div class="recom-theme">
+      <a href="#app" class="recom-title">Our New Arrival</a>
+    </div>
+    <img class="img-recom" src="./Image/slide-01.png">
+    <img class="img-recom" src="./Image/slide-02.png">
+    <img class="img-recom" src="./Image/slide-03.png">
+  </div>
+
+
+  <!--Slide 5-->
+  <div id="contact">
+    <form class="review-form" @submit.prevent="onSubmit">
+      <h3>Leave a review</h3>
+      <label for="name">Name:</label>
+      <input id="name" v-model="name">
+  
+      <label for="review">Review:</label>      
+      <textarea id="review" v-model="review"></textarea>
+  
+      <label for="rating">Rating:</label>
+      <select id="rating" v-model.number="rating">
+        <option>5</option>
+        <option>4</option>
+        <option>3</option>
+        <option>2</option>
+        <option>1</option>
+      </select>
+  
+      <label for="recommend">Would you recommend this product?</label>
+      <select id="recommend" v-model="recommend">
+        <option>Yes</option>
+        <option>No</option>
+      </select> 
+  
+      <input class="button" type="submit" value="Submit">  
+    </form>
+
+    <div class="review-container">
+      <h3>Reviews:</h3>
+        <ul>
+          <li v-for="(review, index) in reviews" :key="index">
+            {{ review.name }} gave this {{ review.rating }} stars
+            <br/>
+            "{{ review.review }}"
+            <br/>
+            Recommended: {{ review.recommend }}
+          </li>
+        </ul>
+      </div>
+  </div>
+
+  <!--Slide 6-->
+  <div id="social">
+    <div class="contacts">
+      <h1>Contacts</h1>
+      <p>arcspace@gmail.com</p>
+      <p>orders_arc@gmail.com</p>
+      <p>0361-888-000<p></p>
+    </div>
+    <div class="social-media-account">
+      <h1>Follow Us</h1>
+        <img class="social-media-img" src="./Image/instagram (2).png">
+        <img class="social-media-img" src="./Image/facebook (2).png">
+        <img class="social-media-img" src="./Image/twitter (2).png">
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div id="footer">
+    <span>&copy; arcspace. all rights reserved.</span>
+  </div>
+
+  
+
+    <!--Import App-->
+    <script src="./javascript/main.js"></script>
+
+    <!--Components-->
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+
+    <!--Router-->
+    <script src="./router/router.js"></script>
+
+    <!--Mount App-->
+    <script>
+      const mountedApp = app.mount('#app');
+    </script>
+  </body>
+</html>
